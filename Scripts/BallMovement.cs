@@ -9,6 +9,8 @@ public class BallMovement : MonoBehaviour
     private int speed = 30;
     private bool movingRight;
     private bool movingUp;
+    public AudioClip sound1;
+    AudioSource audioSource;
 
     private void Start()
     {
@@ -16,26 +18,32 @@ public class BallMovement : MonoBehaviour
         movingRight = (Random.value > 0.5);
         movingUp = (Random.value > 0.5);
         StartCoroutine(StartWait());
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Goal1")
         {
-            SoundManager.Instance.PlaySoundEffect(SoundManager.Instance.SE_Reverbe);
+            //SoundManager.Instance.PlaySoundEffect(SoundManager.Instance.SE_Reverbe);
             Debug.Log("Player 2 scored");
-            //rb.velocity = Vector2.zero;
+            rb.velocity = Vector2.zero;
             GlobalVariables.player2Score++;
-            //SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("GameScene_shishikura");
         }
         if (col.gameObject.tag == "Goal2")
         {
-            SoundManager.Instance.PlaySoundEffect(SoundManager.Instance.SE_Reverbe);
+            //SoundManager.Instance.PlaySoundEffect(SoundManager.Instance.SE_Reverbe);
             Debug.Log("Player 1 scored");
-            //rb.velocity = Vector2.zero;
+            rb.velocity = Vector2.zero;
             GlobalVariables.player1Score++;
-            //SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("GameScene_shishikura");
         }
+        if (col.gameObject.tag == "Wall")
+        {
+           audioSource.PlayOneShot(sound1);
+        }
+
 
     }
 
