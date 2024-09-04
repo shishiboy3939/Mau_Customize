@@ -29,7 +29,7 @@ public class BallMovement : MonoBehaviour
             Debug.Log("Player 2 scored");
             rb.velocity = Vector2.zero;
             GlobalVariables.player2Score++;
-            SceneManager.LoadScene("GameScene_shishikura");
+            SceneManager.LoadScene("GameScene_240905");
         }
         if (col.gameObject.tag == "Goal2")
         {
@@ -37,7 +37,7 @@ public class BallMovement : MonoBehaviour
             Debug.Log("Player 1 scored");
             rb.velocity = Vector2.zero;
             GlobalVariables.player1Score++;
-            SceneManager.LoadScene("GameScene_shishikura");
+            SceneManager.LoadScene("GameScene_240905");
         }
         if (col.gameObject.tag == "Wall")
         {
