@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beab8738a31ed804493bf5d651f159b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound1: {fileID: 0}
+  sound1: {fileID: 8300000, guid: 9ce0dca29c1f9493ca6621efe4c38904, type: 3}
 --- !u!1 &2036317824637726476
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 7560498587987953915}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 5575425988167637665}
   m_Layer: 0
   m_Name: TopWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -932,7 +932,7 @@ GameObject:
   - component: {fileID: 2780699944793041651}
   m_Layer: 0
   m_Name: BottomWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1633,7 +1633,7 @@ GameObject:
   - component: {fileID: 4976685127149512127}
   m_Layer: 0
   m_Name: Player1
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
