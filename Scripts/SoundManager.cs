@@ -6,7 +6,7 @@ public class SoundManager: MonoBehaviour
 {
     public static SoundManager Instance;
 
-    [SerializeField] public AudioClip SE_Reverbe;
+    [SerializeField] public AudioClip SE_Hit;
     [SerializeField] public AudioSource SeSource;
 
     

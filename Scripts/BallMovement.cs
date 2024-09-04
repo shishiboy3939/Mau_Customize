@@ -41,6 +41,7 @@ public class BallMovement : MonoBehaviour
         }
         if (col.gameObject.tag == "Wall")
         {
+           Debug.Log("WallHit");
            audioSource.PlayOneShot(sound1);
         }
 
