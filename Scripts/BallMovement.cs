@@ -18,22 +18,25 @@ public class BallMovement : MonoBehaviour
         StartCoroutine(StartWait());
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Goal1")
         {
+            SoundManager.Instance.PlaySoundEffect(SoundManager.Instance.SE_Reverbe);
             Debug.Log("Player 2 scored");
-            rb.velocity = Vector2.zero;
+            //rb.velocity = Vector2.zero;
             GlobalVariables.player2Score++;
-            SceneManager.LoadScene("GameScene");
+            //SceneManager.LoadScene("GameScene");
         }
         if (col.gameObject.tag == "Goal2")
         {
+            SoundManager.Instance.PlaySoundEffect(SoundManager.Instance.SE_Reverbe);
             Debug.Log("Player 1 scored");
-            rb.velocity = Vector2.zero;
+            //rb.velocity = Vector2.zero;
             GlobalVariables.player1Score++;
-            SceneManager.LoadScene("GameScene");
+            //SceneManager.LoadScene("GameScene");
         }
+
     }
 
     private IEnumerator StartWait()
